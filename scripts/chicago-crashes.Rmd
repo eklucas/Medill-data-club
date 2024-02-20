@@ -1,0 +1,21 @@
+---
+title: "Analyzing crashes in Chicago"
+output: 
+author: "Liz Lucas"
+date: "2024-02-20"
+---
+
+Load the necessary packages:
+```{r}
+library(RSocrata)
+library(tidyverse)
+```
+
+Load the crashes data: 
+```{r}
+crashes <- read.socrata("https://data.cityofchicago.org/resource/85ca-t3if.csv")
+
+# as a backup:
+crashes < read_csv("data/chicago_crashes.csv")
+```
+
