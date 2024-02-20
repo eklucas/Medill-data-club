@@ -4,5 +4,4 @@ Main crash data page: [https://data.cityofchicago.org/Transportation/Traffic-Cra
 
 You can access the data on crashes via 
 - the API endpoint: [https://data.cityofchicago.org/resource/85ca-t3if.csv](https://data.cityofchicago.org/resource/85ca-t3if.csv)
-- [the csv from this repo](data/chicago_crashes.csv)
-- [the .xlsx file from this repo](data/chicago_crashes.xlsx)
+- [this spreadsheet in Google Drive](https://docs.google.com/spreadsheets/d/1AOYPAAL9-dudV0iS0KHDdP_IkdlKPvsQ/edit?usp=sharing&ouid=102740702198268506074&rtpof=true&sd=true)
