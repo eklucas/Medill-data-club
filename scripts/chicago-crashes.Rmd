@@ -6,6 +6,7 @@ date: "2024-02-20"
 ---
 
 Load the necessary packages:
+RSocrata allows you to access Socrata API endpoints and bypass the 1000 record limit.
 ```{r}
 library(RSocrata)
 library(tidyverse)
@@ -14,8 +15,30 @@ library(tidyverse)
 Load the crashes data: 
 ```{r}
 crashes <- read.socrata("https://data.cityofchicago.org/resource/85ca-t3if.csv")
+```
+Rows: 807,284
+What is one row? One crash
+What's in every column? 
 
-# as a backup:
-crashes < read_csv("data/chicago_crashes.csv")
+```{r}
+crashes %>% 
+  count(crash_record_id) %>% 
+  filter(n > 1)
+# this tells us that each value in crash_record_id is unique)
+
+crashes %>% 
+  count(posted_speed_limit)
+# Where would you find speed limit 0? or 99? 
+
+range(crashes$posted_speed_limit)
+# a way to look at the low and high values of a column
+
+crashes %>% 
+  count(crash_type)
+# this is a clean categorical variable
+
+crashes %>% 
+  count(damage)
+# presumably these reports are filled about by police officers at the scene; how do they know the damage? worth asking the PD: probably just an estimate? 
 ```
 
