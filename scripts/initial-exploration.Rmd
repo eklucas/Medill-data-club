@@ -1,0 +1,12 @@
+---
+title: "initial exploration"
+output: 
+author: "Liz Lucas"
+date: "2024-02-20"
+---
+
+```{r}
+library(tidyverse)
+```
+
+
